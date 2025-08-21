@@ -121,5 +121,5 @@ class WorkoutRoutine(models.Model):
         null=True
     )
     time = models.DurationField(null=True, blank=True)
-    datetime = models.DateTimeField(null=True, blank=True)
+    date = models.DateTimeField(null=True, blank=True)
     notes = models.TextField(null=True, blank=True)
