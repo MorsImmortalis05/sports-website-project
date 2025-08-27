@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-  {% block title %}<title>Taxi Service</title>{% endblock %}
+  {% block title %}<title>SportsWebsite</title>{% endblock %}
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet"
@@ -13,6 +13,21 @@
   {% load static %}
   <link rel="stylesheet" href="{% static 'css/styles.css' %}">
 </head>
+
+<header class="site-header">
+    <div class="container">
+        <h1 class="logo"><a href="{% url 'sports_app:index' %}">Sports App</a></h1>
+        <nav>
+            {% if user.profile %}
+              <a href="{% url 'sports_app:profile-detail' pk=user.profile.id %}">My profile</a>
+            {% endif %}
+            <a href="{% url 'sports_app:index' %}">Home</a>
+            <a href="{% url 'sports_app:exercise-list' %}">Exercises</a>
+            <a href="{% url 'sports_app:workout-list' %}">Workouts</a>
+            <a href="{% url 'sports_app:profile-list' %}">Profiles</a>
+        </nav>
+    </div>
+</header>
 
 <body>
 <div class="container-fluid">
@@ -36,5 +51,11 @@
   </div>
 </div>
 </body>
+
+<footer class="site-footer">
+    <div class="container">
+        <p>© 2025 Sports App. Liliia almost did a great job</p>
+    </div>
+</footer>
 
 </html>

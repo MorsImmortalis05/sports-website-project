@@ -1,0 +1,31 @@
+<ul class="sidebar-nav list-group">
+  {% if user.is_authenticated %}
+    {% if user.profile %}
+      <li class="sidebar">User: <a href="{% url 'sports_app:profile-detail' pk=user.profile.id %}">{{ user.get_username }}</a></li>
+      <li class="sidebar">
+        <form action="{% url 'logout' %}" method="post">
+          {% csrf_token %}
+          <button type="submit">Logout</button>
+        </form>
+      </li>
+    {% else %}
+      <li class="sidebar">User: <a href="{% url 'sports_app:profile-form' %}">{{ user.get_username }}</a></li>
+      <li class="sidebar">
+        <form action="{% url 'logout' %}" method="post">
+          {% csrf_token %}
+          <button type="submit">Logout</button>
+        </form>
+      </li>
+    {% endif %}
+  {% else %}
+    <li class="sidebar"><a href="{% url 'login'%}?next={{request.path}}">Login</a></li>
+    <li class="sidebar"><a href="{% url 'sports_app:user-register'%}?next={{request.path}}">Sign up</a></li>
+  {% endif %}
+
+  <br>
+
+  <li class="sidebar"><a href="{% url 'sports_app:index' %}">Home</a></li>
+  <li class="sidebar"><a href="{% url 'sports_app:profile-list' %}">Users</a></li>
+  <li class="sidebar"><a href="{% url 'sports_app:workout-list' %}">Workouts</a></li>
+  <li class="sidebar"><a href="{% url 'sports_app:exercise-list' %}">Exercises</a></li>
+</ul>

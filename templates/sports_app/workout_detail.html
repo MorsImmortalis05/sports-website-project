@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <div class="workout-banner" style="background-image: url('{{ workout.get_image }}');">
+  <div class="overlay">
+    <h1>{{ workout.name }}</h1>
+    <p>Author: {{ workout.author.user.username }}</p>
+  </div>
+  </div>
+  <h1>Exercises</h1>
+  <hr>
+  <ul>
+    {% for i in workout.workout_exercises.all %}
+      <li class="exercise-item">
+        <h2>
+            <a href="{% url 'sports_app:exercise-detail' pk=i.exercise.id %}">
+                {{ i.exercise.name }}
+            </a>
+        </h2>
+        <p class="exercise-description">{{ i.exercise.description }}</p>
+        <div class="exercise-meta">
+            <span class="meta-badge sets-badge">{{ i.sets }} sets</span>
+            <span class="meta-badge reps-badge">{{ i.reps }} reps</span>
+        </div>
+      </li>
+    {% endfor %}
+  </ul>
+  it takes {{ workout.time }} to complete
+        type of program: {{ workout.type_of_program }}
+  notes: {{ workout.notes }}
+{% endblock %}

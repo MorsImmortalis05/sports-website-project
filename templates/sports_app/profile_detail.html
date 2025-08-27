@@ -1,0 +1,62 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <h1>
+    Username: {{ profile.user.username }}
+  </h1>
+
+  <p><strong>First name:</strong> {{ profile.user.first_name }}</p>
+  <p><strong>Last name:</strong> {{ profile.user.last_name }}</p>
+
+  <div class="ml-3">
+    <h4>Workouts</h4>
+    {% if profile.user.id == request.user.id %}
+      <a href="{% url 'sports_app:workout-create' %}" class="btn btn-primary">Create your own workout</a>
+    {% else %}
+    {% endif %}
+    {% for workout in my_workouts %}
+        <hr>
+        <p><strong>{{ workout.name }}</strong></p>
+        <p><strong>{{ workout.duration }}</strong></p>
+        <p><strong>{{ workout.type_of_program }}</strong></p>
+
+    {% empty %}
+      <p>No workouts created</p>
+    {% endfor %}
+
+    <h4>Workout plans</h4>
+
+    {% for workout_plan in profile.workout_plans.all %}
+      <li class="exercise-item">
+        <h2><a href="{% url 'sports_app:workout-plan-detail' pk=workout_plan.id %}">{{ workout_plan.name }}</a></h2>
+        <p class="exercise-description">{{ workout_plan.days_per_week }} times per week</p>
+          {% for workout_schedule in workout_plan.schedules.all %}
+            <p class="exercise-description">
+              {{ workout_schedule.workout.name }} on {{ workout_schedule.get_weekday_display }}
+            </p>
+          {% endfor %}
+      </li>
+    {% empty %}
+      <p>No workout plans created</p>
+    {% endfor %}
+
+  {% if profile.user.id == request.user.id %}
+    <h4>Current workout plan</h4>
+    {% if not current_workout %}
+      <a href="{% url 'sports_app:workout-plan-create' pk=profile.user.id %}" class="btn btn-primary">Create your own workout plan</a>
+    {% else %}
+      <h3>
+      <a href="{% url 'sports_app:workout-plan-detail' pk=current_workout.id %}">
+        {{ current_workout.name }}
+      </a>
+      </h3>
+      <h4>
+      <a href="{% url 'sports_app:workout-plan-create' pk=profile.user.id %}" class="btn btn-primary">
+        Create new workout plan
+      </a>
+      </h4>
+    {% endif %}
+  {% endif %}
+
+  </div>
+{% endblock %}

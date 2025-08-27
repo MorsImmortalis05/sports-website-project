@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% load crispy_forms_filters %}
+{% block content %}
+  <form action="" method="post">
+    {% csrf_token %}
+    {{ form|crispy }}
+
+    {{ formset.management_form }}
+    {% for subform in formset %}
+      {{ subform|crispy }}
+    {% endfor %}
+    <input type="submit" value="Create!">
+  </form>
+{% endblock %}
