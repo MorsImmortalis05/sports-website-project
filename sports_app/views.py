@@ -272,7 +272,7 @@ class WorkoutPlanCreateView(LoginRequiredMixin, generic.CreateView):
         return data
 
     def form_valid(self, form):
-        form.instance.user = self.request.user
+        form.instance.profile = self.request.user.profile
         self.object = form.save()
         return redirect(
             "sports_app:workout-schedule-update",

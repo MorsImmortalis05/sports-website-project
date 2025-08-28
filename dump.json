@@ -1,0 +1,1033 @@
+sports_website.settings.dev
+[
+{
+    "model": "sports_app.profile",
+    "pk": 1,
+    "fields": {
+        "user": 1,
+        "first_name": "lilichka",
+        "last_name": "cool",
+        "weight": "57.0",
+        "weight_goal": "55.0",
+        "height": 165,
+        "age": 20,
+        "sex": "F",
+        "activity_level": "light"
+    }
+},
+{
+    "model": "sports_app.profile",
+    "pk": 2,
+    "fields": {
+        "user": 2,
+        "first_name": "lilichka",
+        "last_name": "cool",
+        "weight": "75.0",
+        "weight_goal": "85.0",
+        "height": 185,
+        "age": 23,
+        "sex": "M",
+        "activity_level": "moderate"
+    }
+},
+{
+    "model": "sports_app.profile",
+    "pk": 3,
+    "fields": {
+        "user": 3,
+        "first_name": "lilichka",
+        "last_name": "cool",
+        "weight": "57.0",
+        "weight_goal": "55.0",
+        "height": 165,
+        "age": 20,
+        "sex": "F",
+        "activity_level": "moderate"
+    }
+},
+{
+    "model": "sports_app.profile",
+    "pk": 4,
+    "fields": {
+        "user": 4,
+        "first_name": "sasha",
+        "last_name": "boba",
+        "weight": "76.0",
+        "weight_goal": "87.0",
+        "height": 182,
+        "age": 23,
+        "sex": "M",
+        "activity_level": "moderate"
+    }
+},
+{
+    "model": "sports_app.exercise",
+    "pk": 1,
+    "fields": {
+        "name": "Bulgarian split squats",
+        "image": null,
+        "muscles_group": "legs",
+        "description": "fwlfwkfwlfwflwfn"
+    }
+},
+{
+    "model": "sports_app.exercise",
+    "pk": 2,
+    "fields": {
+        "name": "Bulgarian split squats",
+        "image": null,
+        "muscles_group": "legs",
+        "description": "fwlfwkfwlfwflwfn"
+    }
+},
+{
+    "model": "sports_app.exercise",
+    "pk": 3,
+    "fields": {
+        "name": "Squats",
+        "image": null,
+        "muscles_group": "legs",
+        "description": "Squats strengthen the quadriceps, hamstrings, glutes, and lower back. Keep your back straight and go down until your thighs are parallel to the floor."
+    }
+},
+{
+    "model": "sports_app.exercise",
+    "pk": 4,
+    "fields": {
+        "name": "Lunges",
+        "image": null,
+        "muscles_group": "legs",
+        "description": "Lunges target the legs and glutes. Step forward, lower your back knee toward the floor, and push back to standing position."
+    }
+},
+{
+    "model": "sports_app.exercise",
+    "pk": 5,
+    "fields": {
+        "name": "Deadlifts",
+        "image": null,
+        "muscles_group": "legs",
+        "description": "Deadlifts work the hamstrings, glutes, and lower back. Keep your spine neutral and lift the weight by extending your hips and knees."
+    }
+},
+{
+    "model": "sports_app.exercise",
+    "pk": 6,
+    "fields": {
+        "name": "Push-ups",
+        "image": null,
+        "muscles_group": "chest",
+        "description": "Push-ups target the chest, shoulders, and triceps. Keep your body straight and lower your chest to the floor, then push back up."
+    }
+},
+{
+    "model": "sports_app.exercise",
+    "pk": 7,
+    "fields": {
+        "name": "Bench Press",
+        "image": null,
+        "muscles_group": "chest",
+        "description": "Bench press develops chest, shoulders, and triceps. Lie on a bench, grip the barbell, lower it to your chest, then press upwards."
+    }
+},
+{
+    "model": "sports_app.exercise",
+    "pk": 8,
+    "fields": {
+        "name": "Pull-ups",
+        "image": null,
+        "muscles_group": "back",
+        "description": "Pull-ups strengthen the back and biceps. Grab the bar with an overhand grip and pull your body up until your chin is over the bar."
+    }
+},
+{
+    "model": "sports_app.exercise",
+    "pk": 9,
+    "fields": {
+        "name": "Bent-over Rows",
+        "image": null,
+        "muscles_group": "back",
+        "description": "Bent-over rows work the upper back and lats. Bend forward at the hips, hold a barbell or dumbbells, and pull them towards your torso."
+    }
+},
+{
+    "model": "sports_app.exercise",
+    "pk": 10,
+    "fields": {
+        "name": "Bicep Curls",
+        "image": null,
+        "muscles_group": "arms",
+        "description": "Bicep curls isolate the biceps. Hold dumbbells and curl them towards your shoulders while keeping elbows close to your body."
+    }
+},
+{
+    "model": "sports_app.exercise",
+    "pk": 11,
+    "fields": {
+        "name": "Tricep Dips",
+        "image": null,
+        "muscles_group": "arms",
+        "description": "Tricep dips strengthen the triceps. Use parallel bars or a bench and lower your body, then push back up."
+    }
+},
+{
+    "model": "sports_app.exercise",
+    "pk": 12,
+    "fields": {
+        "name": "Plank",
+        "image": null,
+        "muscles_group": "core",
+        "description": "Plank is an isometric core exercise. Keep your body straight from head to heels and hold the position to engage abdominal muscles."
+    }
+},
+{
+    "model": "sports_app.exercise",
+    "pk": 13,
+    "fields": {
+        "name": "Russian Twists",
+        "image": null,
+        "muscles_group": "core",
+        "description": "Russian twists target the obliques. Sit with knees bent, lean back slightly, and rotate your torso side to side."
+    }
+},
+{
+    "model": "sports_app.exercise",
+    "pk": 14,
+    "fields": {
+        "name": "Leg Raises",
+        "image": null,
+        "muscles_group": "core",
+        "description": "Leg raises strengthen lower abdominal muscles. Lie on your back, lift your legs without bending knees, and slowly lower them."
+    }
+},
+{
+    "model": "sports_app.exercise",
+    "pk": 15,
+    "fields": {
+        "name": "Running",
+        "image": null,
+        "muscles_group": "cardio",
+        "description": "Running improves cardiovascular endurance, strengthens leg muscles, and burns calories."
+    }
+},
+{
+    "model": "sports_app.exercise",
+    "pk": 16,
+    "fields": {
+        "name": "Jump Rope",
+        "image": null,
+        "muscles_group": "cardio",
+        "description": "Jump rope is a high-intensity cardio exercise that improves stamina, coordination, and burns fat."
+    }
+},
+{
+    "model": "sports_app.exercise",
+    "pk": 17,
+    "fields": {
+        "name": "Burpees",
+        "image": null,
+        "muscles_group": "cardio",
+        "description": "Burpees combine push-ups and jumps for full-body cardio. Start standing, drop to a push-up, jump up, and repeat."
+    }
+},
+{
+    "model": "sports_app.exercise",
+    "pk": 18,
+    "fields": {
+        "name": "Incline Dumbbell Press",
+        "image": null,
+        "muscles_group": "chest",
+        "description": "Incline Dumbbell Press targets the upper chest. Lie on a bench at 30–45°, hold dumbbells above your chest, and press upward until arms are straight. Lower slowly."
+    }
+},
+{
+    "model": "sports_app.exercise",
+    "pk": 19,
+    "fields": {
+        "name": "Chest Fly",
+        "image": null,
+        "muscles_group": "chest",
+        "description": "Chest Fly isolates chest muscles. Lie on a flat bench, hold dumbbells with arms extended, and open arms wide. Bring weights together in a hugging motion."
+    }
+},
+{
+    "model": "sports_app.exercise",
+    "pk": 20,
+    "fields": {
+        "name": "Push-ups with Clap",
+        "image": null,
+        "muscles_group": "chest",
+        "description": "Explosive push-ups for chest power. Lower yourself to the ground and push up forcefully, clapping hands before landing."
+    }
+},
+{
+    "model": "sports_app.exercise",
+    "pk": 21,
+    "fields": {
+        "name": "Lat Pulldown",
+        "image": null,
+        "muscles_group": "back",
+        "description": "Lat Pulldown works the lats. Sit at a machine, grip bar wide, and pull it down to chest while keeping back straight."
+    }
+},
+{
+    "model": "sports_app.exercise",
+    "pk": 22,
+    "fields": {
+        "name": "T-Bar Row",
+        "image": null,
+        "muscles_group": "back",
+        "description": "T-Bar Row targets middle back. Bend forward, grip the bar, and pull it towards your chest while keeping spine neutral."
+    }
+},
+{
+    "model": "sports_app.exercise",
+    "pk": 23,
+    "fields": {
+        "name": "Superman",
+        "image": null,
+        "muscles_group": "back",
+        "description": "Superman strengthens lower back. Lie face down, extend arms forward, and lift arms and legs off the floor simultaneously."
+    }
+},
+{
+    "model": "sports_app.exercise",
+    "pk": 24,
+    "fields": {
+        "name": "Hammer Curls",
+        "image": null,
+        "muscles_group": "arms",
+        "description": "Hammer Curls hit biceps and forearms. Hold dumbbells with neutral grip and curl upwards, keeping elbows close to torso."
+    }
+},
+{
+    "model": "sports_app.exercise",
+    "pk": 25,
+    "fields": {
+        "name": "Overhead Tricep Extension",
+        "image": null,
+        "muscles_group": "arms",
+        "description": "Targets triceps. Hold a dumbbell overhead with both hands, bend elbows to lower weight behind head, then extend arms."
+    }
+},
+{
+    "model": "sports_app.exercise",
+    "pk": 26,
+    "fields": {
+        "name": "Arnold Press",
+        "image": null,
+        "muscles_group": "arms",
+        "description": "Shoulder press variation. Start with dumbbells in front of chest, palms facing you. Rotate palms outward and press overhead."
+    }
+},
+{
+    "model": "sports_app.exercise",
+    "pk": 27,
+    "fields": {
+        "name": "Side Plank",
+        "image": null,
+        "muscles_group": "core",
+        "description": "Side Plank strengthens obliques. Lie on your side, support body on one elbow and feet, and hold body in a straight line."
+    }
+},
+{
+    "model": "sports_app.exercise",
+    "pk": 28,
+    "fields": {
+        "name": "Mountain Climbers",
+        "image": null,
+        "muscles_group": "core",
+        "description": "Dynamic core and cardio exercise. Start in plank position and quickly alternate driving knees toward chest."
+    }
+},
+{
+    "model": "sports_app.exercise",
+    "pk": 29,
+    "fields": {
+        "name": "Hanging Leg Raises",
+        "image": null,
+        "muscles_group": "core",
+        "description": "Targets lower abs. Hang from a bar and lift legs straight up to 90°, then lower with control."
+    }
+},
+{
+    "model": "sports_app.exercise",
+    "pk": 30,
+    "fields": {
+        "name": "Romanian Deadlift",
+        "image": null,
+        "muscles_group": "legs",
+        "description": "Romanian Deadlift hits hamstrings and glutes. Hold barbell, keep back straight, hinge at hips, and lower bar to shins."
+    }
+},
+{
+    "model": "sports_app.exercise",
+    "pk": 31,
+    "fields": {
+        "name": "Calf Raises",
+        "image": null,
+        "muscles_group": "legs",
+        "description": "Strengthens calves. Stand on toes, lift heels as high as possible, then lower slowly."
+    }
+},
+{
+    "model": "sports_app.exercise",
+    "pk": 32,
+    "fields": {
+        "name": "Hip Thrusts",
+        "image": null,
+        "muscles_group": "legs",
+        "description": "Targets glutes. Sit with upper back on bench, barbell over hips. Thrust hips upward until torso is parallel to floor."
+    }
+},
+{
+    "model": "sports_app.exercise",
+    "pk": 33,
+    "fields": {
+        "name": "Step-ups",
+        "image": null,
+        "muscles_group": "legs",
+        "description": "Leg and glute exercise. Step onto a bench with one leg, drive through heel, and return to floor."
+    }
+},
+{
+    "model": "sports_app.exercise",
+    "pk": 34,
+    "fields": {
+        "name": "High Knees",
+        "image": null,
+        "muscles_group": "cardio",
+        "description": "Cardio drill. Run in place, driving knees up to waist height as fast as possible."
+    }
+},
+{
+    "model": "sports_app.exercise",
+    "pk": 35,
+    "fields": {
+        "name": "Jumping Jacks",
+        "image": null,
+        "muscles_group": "cardio",
+        "description": "Full-body cardio warm-up. Jump while spreading arms and legs wide, then return to start."
+    }
+},
+{
+    "model": "sports_app.workout",
+    "pk": 1,
+    "fields": {
+        "name": "Push Day",
+        "author": 1,
+        "description": "author did not provide any description but maybe this workout name says everything...",
+        "type_of_program": "Upper body",
+        "time": "00:45:00",
+        "image": null
+    }
+},
+{
+    "model": "sports_app.workout",
+    "pk": 2,
+    "fields": {
+        "name": "Pull Day",
+        "author": 1,
+        "description": "author did not provide any description but maybe this workout name says everything...",
+        "type_of_program": "Upper body",
+        "time": "00:45:00",
+        "image": null
+    }
+},
+{
+    "model": "sports_app.workout",
+    "pk": 3,
+    "fields": {
+        "name": "Leg Day Blast",
+        "author": 1,
+        "description": "author did not provide any description but maybe this workout name says everything...",
+        "type_of_program": "Legs day",
+        "time": "00:50:00",
+        "image": null
+    }
+},
+{
+    "model": "sports_app.workout",
+    "pk": 4,
+    "fields": {
+        "name": "Upper Body Strength",
+        "author": 1,
+        "description": "author did not provide any description but maybe this workout name says everything...",
+        "type_of_program": "Upper body",
+        "time": "00:50:00",
+        "image": null
+    }
+},
+{
+    "model": "sports_app.workout",
+    "pk": 5,
+    "fields": {
+        "name": "Core Crusher",
+        "author": 1,
+        "description": "author did not provide any description but maybe this workout name says everything...",
+        "type_of_program": "Core",
+        "time": "00:30:00",
+        "image": null
+    }
+},
+{
+    "model": "sports_app.workout",
+    "pk": 6,
+    "fields": {
+        "name": "Cardio Sweat",
+        "author": 1,
+        "description": "author did not provide any description but maybe this workout name says everything...",
+        "type_of_program": "Cardio",
+        "time": "00:25:00",
+        "image": null
+    }
+},
+{
+    "model": "sports_app.workout",
+    "pk": 7,
+    "fields": {
+        "name": "Full Body Burn",
+        "author": 1,
+        "description": "author did not provide any description but maybe this workout name says everything...",
+        "type_of_program": "Upper body",
+        "time": "01:00:00",
+        "image": null
+    }
+},
+{
+    "model": "sports_app.workout",
+    "pk": 8,
+    "fields": {
+        "name": "Leg day",
+        "author": 1,
+        "description": "author did not provide any description but maybe this workout name says everything...",
+        "type_of_program": "Legs day",
+        "time": "01:00:00",
+        "image": null
+    }
+},
+{
+    "model": "sports_app.workoutexercise",
+    "pk": 1,
+    "fields": {
+        "sets": 3,
+        "reps": 8,
+        "rest": null,
+        "workout": 1,
+        "exercise": 6
+    }
+},
+{
+    "model": "sports_app.workoutexercise",
+    "pk": 2,
+    "fields": {
+        "sets": 3,
+        "reps": 8,
+        "rest": null,
+        "workout": 1,
+        "exercise": 7
+    }
+},
+{
+    "model": "sports_app.workoutexercise",
+    "pk": 3,
+    "fields": {
+        "sets": 3,
+        "reps": 8,
+        "rest": null,
+        "workout": 1,
+        "exercise": 18
+    }
+},
+{
+    "model": "sports_app.workoutexercise",
+    "pk": 4,
+    "fields": {
+        "sets": 3,
+        "reps": 8,
+        "rest": null,
+        "workout": 2,
+        "exercise": 8
+    }
+},
+{
+    "model": "sports_app.workoutexercise",
+    "pk": 5,
+    "fields": {
+        "sets": 3,
+        "reps": 8,
+        "rest": null,
+        "workout": 2,
+        "exercise": 9
+    }
+},
+{
+    "model": "sports_app.workoutexercise",
+    "pk": 6,
+    "fields": {
+        "sets": 3,
+        "reps": 8,
+        "rest": null,
+        "workout": 2,
+        "exercise": 21
+    }
+},
+{
+    "model": "sports_app.workoutexercise",
+    "pk": 7,
+    "fields": {
+        "sets": 3,
+        "reps": 8,
+        "rest": null,
+        "workout": 3,
+        "exercise": 3
+    }
+},
+{
+    "model": "sports_app.workoutexercise",
+    "pk": 8,
+    "fields": {
+        "sets": 3,
+        "reps": 8,
+        "rest": null,
+        "workout": 3,
+        "exercise": 4
+    }
+},
+{
+    "model": "sports_app.workoutexercise",
+    "pk": 9,
+    "fields": {
+        "sets": 3,
+        "reps": 8,
+        "rest": null,
+        "workout": 3,
+        "exercise": 5
+    }
+},
+{
+    "model": "sports_app.workoutexercise",
+    "pk": 10,
+    "fields": {
+        "sets": 3,
+        "reps": 8,
+        "rest": null,
+        "workout": 3,
+        "exercise": 30
+    }
+},
+{
+    "model": "sports_app.workoutexercise",
+    "pk": 11,
+    "fields": {
+        "sets": 3,
+        "reps": 8,
+        "rest": null,
+        "workout": 4,
+        "exercise": 6
+    }
+},
+{
+    "model": "sports_app.workoutexercise",
+    "pk": 12,
+    "fields": {
+        "sets": 3,
+        "reps": 8,
+        "rest": null,
+        "workout": 4,
+        "exercise": 7
+    }
+},
+{
+    "model": "sports_app.workoutexercise",
+    "pk": 13,
+    "fields": {
+        "sets": 3,
+        "reps": 8,
+        "rest": null,
+        "workout": 4,
+        "exercise": 18
+    }
+},
+{
+    "model": "sports_app.workoutexercise",
+    "pk": 14,
+    "fields": {
+        "sets": 3,
+        "reps": 8,
+        "rest": null,
+        "workout": 4,
+        "exercise": 20
+    }
+},
+{
+    "model": "sports_app.workoutexercise",
+    "pk": 15,
+    "fields": {
+        "sets": 3,
+        "reps": 8,
+        "rest": null,
+        "workout": 5,
+        "exercise": 12
+    }
+},
+{
+    "model": "sports_app.workoutexercise",
+    "pk": 16,
+    "fields": {
+        "sets": 3,
+        "reps": 8,
+        "rest": null,
+        "workout": 5,
+        "exercise": 13
+    }
+},
+{
+    "model": "sports_app.workoutexercise",
+    "pk": 17,
+    "fields": {
+        "sets": 3,
+        "reps": 8,
+        "rest": null,
+        "workout": 5,
+        "exercise": 14
+    }
+},
+{
+    "model": "sports_app.workoutexercise",
+    "pk": 18,
+    "fields": {
+        "sets": 3,
+        "reps": 8,
+        "rest": null,
+        "workout": 6,
+        "exercise": 15
+    }
+},
+{
+    "model": "sports_app.workoutexercise",
+    "pk": 19,
+    "fields": {
+        "sets": 3,
+        "reps": 8,
+        "rest": null,
+        "workout": 6,
+        "exercise": 16
+    }
+},
+{
+    "model": "sports_app.workoutexercise",
+    "pk": 20,
+    "fields": {
+        "sets": 3,
+        "reps": 8,
+        "rest": null,
+        "workout": 6,
+        "exercise": 17
+    }
+},
+{
+    "model": "sports_app.workoutexercise",
+    "pk": 21,
+    "fields": {
+        "sets": 3,
+        "reps": 8,
+        "rest": null,
+        "workout": 6,
+        "exercise": 34
+    }
+},
+{
+    "model": "sports_app.workoutexercise",
+    "pk": 22,
+    "fields": {
+        "sets": 3,
+        "reps": 8,
+        "rest": null,
+        "workout": 6,
+        "exercise": 35
+    }
+},
+{
+    "model": "sports_app.workoutexercise",
+    "pk": 23,
+    "fields": {
+        "sets": 3,
+        "reps": 8,
+        "rest": null,
+        "workout": 7,
+        "exercise": 6
+    }
+},
+{
+    "model": "sports_app.workoutexercise",
+    "pk": 24,
+    "fields": {
+        "sets": 3,
+        "reps": 8,
+        "rest": null,
+        "workout": 7,
+        "exercise": 7
+    }
+},
+{
+    "model": "sports_app.workoutexercise",
+    "pk": 25,
+    "fields": {
+        "sets": 3,
+        "reps": 8,
+        "rest": null,
+        "workout": 7,
+        "exercise": 18
+    }
+},
+{
+    "model": "sports_app.workoutexercise",
+    "pk": 26,
+    "fields": {
+        "sets": 3,
+        "reps": 8,
+        "rest": null,
+        "workout": 7,
+        "exercise": 20
+    }
+},
+{
+    "model": "sports_app.workoutexercise",
+    "pk": 27,
+    "fields": {
+        "sets": 3,
+        "reps": 8,
+        "rest": null,
+        "workout": 8,
+        "exercise": 3
+    }
+},
+{
+    "model": "sports_app.workoutexercise",
+    "pk": 28,
+    "fields": {
+        "sets": 3,
+        "reps": 8,
+        "rest": null,
+        "workout": 8,
+        "exercise": 4
+    }
+},
+{
+    "model": "sports_app.workoutexercise",
+    "pk": 29,
+    "fields": {
+        "sets": 3,
+        "reps": 8,
+        "rest": null,
+        "workout": 8,
+        "exercise": 5
+    }
+},
+{
+    "model": "sports_app.workoutexercise",
+    "pk": 30,
+    "fields": {
+        "sets": 3,
+        "reps": 8,
+        "rest": null,
+        "workout": 8,
+        "exercise": 30
+    }
+},
+{
+    "model": "sports_app.workoutexercise",
+    "pk": 31,
+    "fields": {
+        "sets": 3,
+        "reps": 8,
+        "rest": null,
+        "workout": 8,
+        "exercise": 31
+    }
+},
+{
+    "model": "sports_app.workoutexercise",
+    "pk": 32,
+    "fields": {
+        "sets": 3,
+        "reps": 8,
+        "rest": null,
+        "workout": 8,
+        "exercise": 32
+    }
+},
+{
+    "model": "sports_app.workoutexercise",
+    "pk": 33,
+    "fields": {
+        "sets": 3,
+        "reps": 8,
+        "rest": null,
+        "workout": 8,
+        "exercise": 33
+    }
+},
+{
+    "model": "sports_app.workoutplan",
+    "pk": 6,
+    "fields": {
+        "name": "my plan for this week",
+        "profile": 1,
+        "current": false,
+        "days_per_week": 3
+    }
+},
+{
+    "model": "sports_app.workoutplan",
+    "pk": 7,
+    "fields": {
+        "name": "big muscles plan",
+        "profile": 1,
+        "current": false,
+        "days_per_week": 3
+    }
+},
+{
+    "model": "sports_app.workoutplan",
+    "pk": 8,
+    "fields": {
+        "name": "My test plan",
+        "profile": 1,
+        "current": false,
+        "days_per_week": 3
+    }
+},
+{
+    "model": "sports_app.workoutplan",
+    "pk": 9,
+    "fields": {
+        "name": "My test plan",
+        "profile": 1,
+        "current": false,
+        "days_per_week": 3
+    }
+},
+{
+    "model": "sports_app.workoutplan",
+    "pk": 10,
+    "fields": {
+        "name": "My test plan",
+        "profile": 1,
+        "current": false,
+        "days_per_week": 3
+    }
+},
+{
+    "model": "sports_app.workoutplan",
+    "pk": 11,
+    "fields": {
+        "name": "My test plan",
+        "profile": 1,
+        "current": true,
+        "days_per_week": 5
+    }
+},
+{
+    "model": "sports_app.workoutplan",
+    "pk": 12,
+    "fields": {
+        "name": "mark pridumal",
+        "profile": 4,
+        "current": false,
+        "days_per_week": 3
+    }
+},
+{
+    "model": "sports_app.workoutplan",
+    "pk": 13,
+    "fields": {
+        "name": "slfnsllsvnlsnvlsnv",
+        "profile": 1,
+        "current": false,
+        "days_per_week": 3
+    }
+},
+{
+    "model": "sports_app.workoutschedule",
+    "pk": 1,
+    "fields": {
+        "workout_plan": 6,
+        "workout": 8,
+        "weekday": "1"
+    }
+},
+{
+    "model": "sports_app.workoutschedule",
+    "pk": 2,
+    "fields": {
+        "workout_plan": 6,
+        "workout": 4,
+        "weekday": "3"
+    }
+},
+{
+    "model": "sports_app.workoutschedule",
+    "pk": 3,
+    "fields": {
+        "workout_plan": 6,
+        "workout": 5,
+        "weekday": "5"
+    }
+},
+{
+    "model": "sports_app.workoutschedule",
+    "pk": 4,
+    "fields": {
+        "workout_plan": 7,
+        "workout": 8,
+        "weekday": "1"
+    }
+},
+{
+    "model": "sports_app.workoutschedule",
+    "pk": 5,
+    "fields": {
+        "workout_plan": 7,
+        "workout": 5,
+        "weekday": "3"
+    }
+},
+{
+    "model": "sports_app.workoutschedule",
+    "pk": 6,
+    "fields": {
+        "workout_plan": 7,
+        "workout": 4,
+        "weekday": "5"
+    }
+},
+{
+    "model": "sports_app.workoutschedule",
+    "pk": 7,
+    "fields": {
+        "workout_plan": 12,
+        "workout": 3,
+        "weekday": "1"
+    }
+},
+{
+    "model": "sports_app.workoutschedule",
+    "pk": 8,
+    "fields": {
+        "workout_plan": 12,
+        "workout": 5,
+        "weekday": "3"
+    }
+},
+{
+    "model": "sports_app.workoutschedule",
+    "pk": 9,
+    "fields": {
+        "workout_plan": 12,
+        "workout": 4,
+        "weekday": "5"
+    }
+}
+]

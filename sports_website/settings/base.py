@@ -12,11 +12,14 @@ https://docs.djangoproject.com/en/5.2/ref/settings/
 import os
 from pathlib import Path
 import cloudinary
-from decouple import Config, RepositoryEnv
 from dotenv import load_dotenv
 
 
+BASE_DIR = Path(__file__).resolve().parent.parent.parent
+
 load_dotenv()
+
+print(os.environ["DJANGO_SETTINGS_MODULE"])
 
 cloudinary.config(
     cloud_name="duwxznzwk",
@@ -25,14 +28,10 @@ cloudinary.config(
     secure=True
 )
 
-BASE_DIR = Path(__file__).resolve().parent.parent
 
+SECRET_KEY = os.environ['DJANGO_SECRET_KEY']
 
-SECRET_KEY = os.getenv('DJANGO_SECRET_KEY')
-
-DEBUG = os.getenv("DJANGO_DEBUG_TOOLBAR")
-
-ALLOWED_HOSTS = ["127.0.0.1"]
+DEBUG = True
 
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -43,7 +42,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     "crispy_bootstrap4",
     "crispy_forms",
-    'sports_app'
+    "sports_app",
 ]
 
 MIDDLEWARE = [
@@ -73,6 +72,8 @@ TEMPLATES = [
     },
 ]
 
+ALLOWED_HOSTS = ['localhost', '127.0.0.1']
+
 CRISPY_TEMPLATE_PACK = "bootstrap4"
 
 WSGI_APPLICATION = 'sports_website.wsgi.application'
@@ -81,16 +82,13 @@ WSGI_APPLICATION = 'sports_website.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/5.2/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
-}
 
 
 # Password validation
 # https://docs.djangoproject.com/en/5.2/ref/settings/#auth-password-validators
+
+AUTH_USER_MODEL = 'auth.User'
+
 
 AUTH_PASSWORD_VALIDATORS = [
     {

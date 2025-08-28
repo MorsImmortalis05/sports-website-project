@@ -57,6 +57,7 @@ class WorkoutPlanForm(forms.ModelForm):
     class Meta:
         model = WorkoutPlan
         fields = "__all__"
+        exclude = ["profile"]
 
 
 class WorkoutScheduleForm(forms.ModelForm):
