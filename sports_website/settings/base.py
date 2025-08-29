@@ -15,11 +15,10 @@ import cloudinary
 from dotenv import load_dotenv
 
 
-BASE_DIR = Path(__file__).resolve().parent.parent.parent
+BASE_DIR = Path(__file__).resolve().parent.parent
 
 load_dotenv()
 
-print(os.environ["DJANGO_SETTINGS_MODULE"])
 
 cloudinary.config(
     cloud_name="duwxznzwk",
@@ -30,8 +29,6 @@ cloudinary.config(
 
 
 SECRET_KEY = os.environ['DJANGO_SECRET_KEY']
-
-DEBUG = True
 
 INSTALLED_APPS = [
     'django.contrib.admin',

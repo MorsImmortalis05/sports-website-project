@@ -22,6 +22,7 @@ def main():
         ) from exc
     execute_from_command_line(sys.argv)
 
+print(os.environ["DJANGO_SETTINGS_MODULE"])
 
 if __name__ == '__main__':
     main()
