@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <h1>MuscleMap</h1>
+  <p>Discover diverse workouts and create personalized plans to stay on track with your fitness goals.</p>
+  <h2>We have:</h2>
+  <ul>
+    <li>
+      <div class="exercise-card">
+        <strong><a href="{% url 'sports_app:exercise-list' %}">Exercises</a> </strong>
+        <img src="https://res.cloudinary.com/duwxznzwk/image/upload/v1756032754/pexels-roman-odintsov-8038625_fyl72q.jpg" style="object-fit:cover;">
+      </div>
+    </li>
+    <li>
+      <div class="exercise-card">
+        <strong><a href="{% url 'sports_app:workout-list' %}">Workouts</a></strong>
+        <img src="https://res.cloudinary.com/duwxznzwk/image/upload/v1756032753/pexels-scottwebb-28061_ws1x5y.jpg" style="object-fit:cover;">
+      </div>
+    </li>
+    <li>
+      <div class="exercise-card">
+          {% if user.is_authenticated %}
+            <strong>
+              <a href="{% url 'sports_app:workout-plan-create' pk=request.user.profile.id %}">
+              Create workout plan
+              </a>
+            </strong>
+          {% else %}
+            <strong>
+              <a href="{% url 'login'%}?next={{request.path}}">Login</a>
+              or
+              <a href="{% url 'sports_app:user-register'%}?next={{request.path}}">Sign up</a>
+              to create your own workout plan
+            </strong>
+          {% endif %}
+          <img src="https://res.cloudinary.com/duwxznzwk/image/upload/v1756033108/pexels-olly-3837788_ipnvjr.jpg" style="object-fit:cover;">
+      </div>
+    </li>
+  </ul>
+
+{% endblock %}

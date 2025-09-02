@@ -3,10 +3,15 @@
 import os
 import sys
 
+from dotenv import load_dotenv
+
+
+load_dotenv(override=True)
+
 
 def main():
     """Run administrative tasks."""
-    os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'sports_website.settings')
+    os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'sports_website.settings.dev')
     try:
         from django.core.management import execute_from_command_line
     except ImportError as exc:
@@ -17,6 +22,7 @@ def main():
         ) from exc
     execute_from_command_line(sys.argv)
 
+print(os.environ["DJANGO_SETTINGS_MODULE"])
 
 if __name__ == '__main__':
     main()

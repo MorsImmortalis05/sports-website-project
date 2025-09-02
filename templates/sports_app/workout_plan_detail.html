@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="week-plan-container">
+    <h2 class="week-plan-title">{{ workout_plan.name }}</h2>
+    <div class="week-grid">
+        {% for label, schedules in days_with_schedules %}
+            <div class="week-day">
+                <div class="day-label">{{ label }}</div>
+                <div class="day-content">
+                    {% if schedules %}
+                        {% for schedule in schedules %}
+                            <div class="workout-card"
+                                 style="background-image: url('{{ schedule.workout.get_image }}');">
+                                <div class="workout-overlay">
+                                  <a href="{% url 'sports_app:workout-detail' pk=schedule.workout.id %}">
+                                    <span class="workout-name">{{ schedule.workout.name }}</span>
+                                  </a>
+                                </div>
+                            </div>
+                        {% endfor %}
+                    {% else %}
+                        <div class="no-workout">—</div>
+                    {% endif %}
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}

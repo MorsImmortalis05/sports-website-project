@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <h1>
+    {{ exercise.name }}
+  </h1>
+  {% if exercise.author.user == request.user %}
+    <a href="{% url 'sports_app:exercise-update' exercise.id %}" class="btn btn-sm btn-primary">
+      Update exercise
+    </a>
+  {% endif %}
+  <p>{{ exercise.muscles_group }}</p>
+  <h2>
+    How to do this exercise?
+  </h2>
+    <p>{{ exercise.description }}</p>
+  <img src="{{ exercise.get_image }}" alt="Exercise image" style="max-width:300px; max-height:200px; object-fit:cover;">
+
+{% endblock %}

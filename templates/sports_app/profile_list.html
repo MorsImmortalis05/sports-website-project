@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <h1>
+    Users
+  </h1>
+    <ul>
+      {% for profile in Profile.objects.all %}
+        <li>
+          <a href="{% url "sports_app:profile-detail" pk=workout.id %}">{{ profile.user.username }}</a>
+        </li>
+      {% endfor %}
+    </ul>
+{% endblock %}

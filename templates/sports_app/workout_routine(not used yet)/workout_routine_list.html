@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <h1>
+    Workout Routines of {{ user.username }}
+  </h1>
+  {% if routine_list %}
+    <ul>
+      {% for workout in routine_list %}
+        <li>
+          <a href="{% url "sports_app:routine-detail" pk=routine.id %} ">{{ routine.name }}</a>
+          {{ routine.date }} ({{ routine.notes }})
+        </li>
+      {% endfor %}
+    </ul>
+  {% else %}
+    <p>There are no workout routines yet :(</p>
+  {% endif %}
+{% endblock %}

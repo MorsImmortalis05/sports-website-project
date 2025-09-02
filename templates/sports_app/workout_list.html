@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <h1>
+    Workouts
+  </h1>
+  <form method="get" action="" class="search-form">
+    {{ search_form }}
+    <input class="btn btn-secondary" type="submit" value="🎀">
+  </form>
+  <a href="{% url 'sports_app:workout-create' %}" class="btn btn-primary">Create new workout</a>
+  {% if workout_list %}
+    <ul>
+      {% for workout in workout_list %}
+        <li>
+        <div class="exercise-card">
+          <img src="{{ workout.get_image }}" alt="{{ workout.type_of_program }}" style="max-width:300px; max-height:200px; object-fit:cover;">
+          <a href="{% url "sports_app:workout-detail" pk=workout.id %}">{{ workout.name }}</a>
+          {{ workout.type_of_program }} ({{ workout.author__name }})
+          <div class="exercise-info">
+            {{ workout.description }}
+          </div>
+          {% if workout.author.user == request.user %}
+            <a href="{% url 'sports_app:workout-update' pk=workout.id %}" class="btn btn-sm btn-primary">
+              Edit workout
+            </a>
+          {% endif %}
+          </div>
+        </li>
+
+      {% endfor %}
+    </ul>
+  {% else %}
+    <p>There are no workouts</p>
+  {% endif %}
+{% endblock %}

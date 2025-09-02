@@ -1,0 +1,620 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Roboto:wght@400;700&display=swap');
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #0d0d0d;
+    color: #f5f5f5;
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2, h3, h4 {
+    font-family: 'Anton', sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+}
+
+h1 {
+    font-size: 5rem;
+    color: #ff00ff;
+    text-shadow: 2px 2px #000;
+}
+
+h2 {
+    font-size: 2.5rem;
+    color: #00ffff;
+    text-shadow: 1px 1px #000;
+}
+
+h3 {
+    font-size: 2rem;
+    color: #ffdc00;
+}
+
+h4 {
+    font-size: 1.5rem;
+    color: #ff6f00;
+}
+
+p, li {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #f5f5f5;
+}
+
+.btn-primary {
+    background: linear-gradient(45deg, #ff00ff, #00ffff) !important;
+    border: none !important;
+    font-weight: 700;
+    text-transform: uppercase;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.btn-primary:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px #ff00ff, 0 0 25px #00ffff;
+}
+
+a {
+    color: #00ffff;
+    font-weight: 700;
+    text-decoration: none;
+    transition: color 0.2s, text-shadow 0.2s;
+}
+
+a:hover {
+    color: #ff00ff;
+    text-shadow: 2px 2px #000;
+}
+
+ul, ol {
+    padding-left: 1.5rem;
+}
+
+li {
+    background: rgba(255, 255, 255, 0.05);
+    margin-bottom: 1rem;
+    padding: 1rem;
+    border-left: 5px solid #ff00ff;
+    border-radius: 5px;
+    list-style-type: none;
+}
+
+li img {
+    border-radius: 10px;
+    margin-top: 0.5rem;
+    box-shadow: 0 0 10px #ff00ff, 0 0 15px #00ffff;
+}
+
+.ml-3 {
+    background: rgba(255,255,255,0.05);
+    padding: 2rem;
+    border-radius: 10px;
+    margin-bottom: 2rem;
+    box-shadow: 0 0 20px rgba(255,255,255,0.1);
+}
+
+hr {
+    border: 0;
+    height: 2px;
+    background: linear-gradient(to right, #ff00ff, #00ffff);
+    margin: 1rem 0;
+}
+
+body::-webkit-scrollbar {
+    width: 10px;
+}
+body::-webkit-scrollbar-thumb {
+    background: linear-gradient(45deg, #ff00ff, #00ffff);
+    border-radius: 10px;
+}
+body::-webkit-scrollbar-track {
+    background: #0d0d0d;
+}
+
+/* Сайдбар загалом */
+.sidebar-nav {
+    padding-left: 0;
+    margin-top: 1rem;
+}
+
+.sidebar-nav .sidebar {
+    list-style: none;
+    margin-bottom: 0.75rem;
+    padding: 0.5rem 1rem;
+    background-color: rgba(255, 255, 255, 0.15) !important;
+    border-left: 4px solid #ff00ff;
+    border-radius: 4px;
+    font-size: 0.95rem;
+    transition: background-color 0.2s ease-in-out;
+}
+
+.sidebar-nav .sidebar:hover {
+    background-color: #e2e6ea;
+}
+
+/* Лінки */
+.sidebar-nav .sidebar a {
+    color: #00ffff;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+.sidebar-nav .sidebar a:hover {
+    text-decoration: underline;
+}
+
+/* Кнопка Logout */
+.sidebar-nav .sidebar form {
+    margin: 0;
+}
+
+.sidebar-nav .sidebar button[type="submit"] {
+    background-color: #dc3545;
+    color: #fff;
+    border: none;
+    padding: 0.4rem 0.75rem;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+}
+
+.sidebar-nav .sidebar button[type="submit"]:hover {
+    background-color: #dc3545 !important;
+    color: #fff; !important;
+    border: none;
+    padding: 0.4rem 0.75rem;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+}
+
+/* Login / Sign up */
+.sidebar-nav .sidebar a.login-link,
+.sidebar-nav .sidebar a.signup-link {
+    display: inline-block;
+    padding: 0.4rem 0.75rem;
+    background: linear-gradient(45deg, #ff00ff, #00ffff);
+    color: white;
+    border-radius: 4px;
+    font-weight: 500;
+    text-decoration: none;
+    transition: background-color 0.2s ease-in-out;
+}
+
+.sidebar-nav .sidebar a.login-link:hover,
+.sidebar-nav .sidebar a.signup-link:hover {
+    background-color: #0056b3;
+}
+
+
+.card,
+.week-day,
+.card.week-day {
+    background: rgba(255, 255, 255, 0.15) !important;
+    backdrop-filter: blur(10px);
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.3) !important;
+    color: #f5f5f5;
+}
+
+.week-day.has-workout {
+    background: linear-gradient(135deg, #4cb4ff 0%, #6a5af9 100%) !important;
+    color: white !important;
+}
+.week-day.no-workout {
+    background: rgba(255, 255, 255, 0.05) !important;
+    color: #aaa !important;
+}
+
+.main-content {
+    margin: 0 auto;
+    max-width: 1200px;
+    padding: 2rem;
+}
+
+.site-header, .site-footer {
+    background: linear-gradient(45deg, #ff00ff, #00ffff);
+    padding: 1rem 0;
+    text-align: center;
+}
+
+.site-header .logo a {
+    color: #fff;
+    font-family: 'Anton', sans-serif;
+    font-size: 2rem;
+    text-decoration: none;
+}
+
+.site-header nav a {
+    margin: 0 1rem;
+    color: #fff;
+    font-weight: bold;
+}
+.site-header nav a:hover {
+    color: #000;
+}
+
+.site-footer p {
+    color: #fff;
+    font-size: 0.9rem;
+}
+
+.exercise-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    background: rgba(255, 255, 255, 0.05);
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(255,255,255,0.1);
+    text-align: center;
+}
+.exercise-card img {
+    width: 150px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 0 10px #ff00ff, 0 0 15px #00ffff;
+}
+
+.exercise-card .exercise-info {
+    flex: 1;
+    text-align: center;
+}
+
+.week-plan-container {
+    max-width: 1000px;
+    margin: auto;
+    font-family: sans-serif;
+}
+
+.week-plan-title {
+    text-align: center;
+    color: #4cb4ff;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.week-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 10px;
+}
+
+.day-label {
+    font-weight: bold;
+    margin-bottom: 8px;
+    font-size: 1.1em;
+    color: #fff;
+    text-align: center;
+}
+
+.day-content {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    align-items: center;
+    text-align: center;
+}
+
+.workout-card {
+    position: relative;
+    width: 100%;
+    min-height: 150px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 8px;
+    overflow: hidden;
+    display: flex;
+    align-items: flex-end;
+}
+
+.workout-overlay {
+    width: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 6px;
+    text-align: center;
+}
+
+.workout-name {
+    font-weight: bold;
+    font-size: 1em;
+}
+
+.no-workout {
+    color: #aaa;
+    font-size: 0.85em;
+}
+
+@media (max-width: 768px) {
+    .week-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media (max-width: 480px) {
+    .week-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.exercise-item {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 1rem;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+    box-shadow: 0 0 10px rgba(255,255,255,0.1);
+}
+
+.exercise-item h2 {
+    margin-bottom: 0.5rem;
+}
+
+.exercise-description {
+    font-size: 0.95rem;
+    color: #ccc;
+    margin-bottom: 0.8rem;
+}
+
+.exercise-meta {
+    display: flex;
+    gap: 10px;
+}
+
+.meta-badge {
+    display: inline-block;
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: bold;
+    color: white;
+}
+
+.sets-badge {
+    background: linear-gradient(45deg, #ff00ff, #ff6f00);
+    box-shadow: 0 0 8px rgba(255,0,255,0.5);
+}
+
+.reps-badge {
+    background: linear-gradient(45deg, #00ffff, #4cb4ff);
+    box-shadow: 0 0 8px rgba(0,255,255,0.5);
+}
+
+.workout-banner {
+  position: relative;
+  height: 250px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.4);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.overlay h1 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+.search-form {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+    background: rgba(255, 255, 255, 0.05);
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(255,255,255,0.1);
+    width: 100%;
+}
+
+.search-form input[type="text"] {
+    flex: 1;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 20px;
+    font-size: 0.95rem;
+    background: rgba(255,255,255,0.1);
+    color: white;
+    outline: none;
+    transition: background 0.3s ease;
+    width: 100%;
+    min-width: 400px;
+}
+
+.search-form input[type="text"]::placeholder {
+    color: #ccc;
+    width: 100%
+}
+
+.search-form input[type="text"]:focus {
+    background: rgba(255,255,255,0.2);
+
+}
+
+.search-form button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    background: linear-gradient(45deg, #00ffff, #4cb4ff);
+    color: white;
+    box-shadow: 0 0 8px rgba(0,255,255,0.5);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.search-form button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 0 12px rgba(0,255,255,0.8);
+}
+
+input[type="hidden"] {
+    display: none !important;
+}
+
+.errorlist {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 1rem 0;
+    color: #b71c1c;
+    background: #ffebee;
+    border: 1px solid #f44336;
+    border-radius: 4px;
+    font-size: 0.9rem;
+}
+.errorlist li {
+    padding: 0.5rem 0.75rem;
+}
+
+form .form-control {
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    padding: 0.5rem 0.75rem;
+    margin-bottom: 1rem;
+    transition: border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+form .form-control:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 0 0.2rem rgba(0,123,255,.25);
+}
+
+form label {
+    font-weight: 600;
+    margin-bottom: 0.25rem;
+}
+
+form input[type="submit"],
+form button[type="submit"] {
+    display: inline-block;
+    width: auto;
+    min-width: 150px;
+    padding: 0.5rem 1.25rem;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 6px;
+    border: none;
+    background-color: #007bff;
+    color: #fff;
+    transition: background-color 0.2s ease-in-out;
+}
+form input[type="submit"]:hover,
+form button[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+form .btn-block {
+    width: 100%;
+}
+
+/* Контейнер пагінації */
+.pagination {
+    display: flex;
+    justify-content: center;
+    margin: 2rem 0;
+}
+
+/* Кожен елемент */
+.page-item {
+    margin: 0 0.25rem;
+}
+
+/* Посилання */
+.page-link {
+    color: white;
+    background: linear-gradient(45deg, #ff00ff, #ff6f00);
+    box-shadow: 0 0 8px rgba(255, 0, 255, 0.5);
+    padding: 0.5rem 0.75rem;
+    border-radius: 6px;
+    font-weight: 500;
+    transition: all 0.2s ease-in-out;
+}
+
+.page-item.active .page-link {
+    color: white;
+    background: linear-gradient(45deg, #ff00ff, #ff6f00);
+    box-shadow: 0 0 8px rgba(255, 0, 255, 0.5);
+    font-weight: 600;
+}
+
+.page-item.disabled .page-link {
+    color: white;
+    background: linear-gradient(45deg, #ff00ff, #ff6f00);
+    box-shadow: 0 0 8px rgba(255, 0, 255, 0.5);
+}
+
+/* Контейнер логіну */
+.login-container {
+    max-width: 400px;
+    margin: 3rem auto;
+    padding: 2rem;
+    background: linear-gradient(45deg, #ff00ff, #4cb4ff);
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+/* Заголовок */
+.login-container h1 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    font-weight: 600;
+    color: #343a40;
+}
+
+/* Повідомлення про помилку */
+.login-container .error-message {
+    background-color: #ffe6e6;
+    color: #b71c1c;
+    padding: 0.75rem 1rem;
+    border-radius: 6px;
+    margin-bottom: 1rem;
+    font-size: 0.95rem;
+    border: 1px solid #f44336;
+}
+
+/* Повідомлення next */
+.login-container .next-message {
+    background: linear-gradient(45deg, #ff00ff, #ff6f00);
+    color: #0d6efd;
+    padding: 0.75rem 1rem;
+    border-radius: 6px;
+    margin-bottom: 1rem;
+    font-size: 0.95rem;
+    border: 1px solid #90caf9;
+}
+
+/* Кнопка логіну */
+.login-container input[type="submit"] {
+    width: 100%;
+    padding: 0.6rem 1rem;
+    font-size: 1rem;
+    font-weight: 500;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    transition: background-color 0.2s ease-in-out;
+}
+
+.login-container input[type="submit"]:hover {
+    background-color: #0056b3;
+}
+

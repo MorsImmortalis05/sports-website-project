@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <h1>
+    Exercises
+  </h1>
+  <form method="get" action="" class="search-form">
+    {{ search_form }}
+    <input class="btn btn-secondary" type="submit" value="🎀">
+  </form>
+  <a href="{% url 'sports_app:exercise-create' %}" class="btn btn-primary">Add new exercise</a>
+      {% for exercise in exercise_list %}
+        <li>
+        <div class="exercise-card">
+          <img src="{{ exercise.get_image }}" alt="{{ exercise.muscles_group }}" style="max-width:300px; max-height:200px; object-fit:cover;">
+          <h3><a href="{% url 'sports_app:exercise-detail' pk=exercise.id %}">{{ exercise.name }}</a></h3>
+          {% if exercise.author.user == request.user %}
+            <a href="{% url 'sports_app:exercise-update' exercise.id %}" class="btn btn-sm btn-primary">
+              Update exercise
+            </a>
+          {% endif %}
+          {{ exercise.muscles_group }}
+          <div class="exercise-info">
+            How to do this exercise:
+            {{ exercise.description }}
+          </div>
+        </div>
+        </li>
+
+      {% endfor %}
+{% endblock %}
